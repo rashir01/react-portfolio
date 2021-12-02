@@ -1,38 +1,336 @@
-.App {
-  text-align: center;
+:root {
+  /* declare a variable with `--` syntax */
+  --standard-padding: 185px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 4px;
+  padding: 4px;
+  background-color: #111a20;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  max-width: 1200px;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  color: #83d2ff;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+/* Nav Bar Settings */
+.navbar {
+  color: white;
+  height: 75px;
+}
+
+.navbar .container {
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 0px;
+}
+
+.navbar .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 18px;
+  margin: 0 25px;
+}
+
+/* add effects to links */
+.navbar a:hover {
+  border-bottom: 2px #fff solid;
+}
+
+.navbar h1 {
+  width: 200px;
+  height: 21px;
+  top: 64px;
+  left: 10;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 21px;
+  letter-spacing: 4px;
+  color: #c4cdd2;
+  border-right: 1px solid #3d96e9;
+}
+
+/* Home section settings */
+.home {
+  display: flex;
+  flex-direction: row;
+  height: 125px;
+}
+
+.home img {
+  width: 120px;
+  height: 120px;
+}
+
+.home .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.home .container h2 {
+  color: #fff;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  line-height: 46px;
+  margin: 15px 60px;
+}
+
+/* special highlight for my name */
+#name {
+  background-color: #a9daf6;
+  color: #111a20;
+}
+
+/* About section  */
+.about .container h2 {
+  color: #83d2ff;
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 18px;
+  margin: 0 var(--standard-padding);
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+
+.about .card h3 {
+  margin: 0 var(--standard-padding);
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+
+.about p {
+  color: #d9dcde;
+  font-family: "Roboto", sans-serif;
+  line-height: 25px;
+  font-style: normal;
+  margin: 0 var(--standard-padding);
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
+/* projects section */
+.projects h2 {
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+  font-weight: normal;
+  color: #83ffe9;
+  margin: 0 var(--standard-padding);
+  padding-bottom: 30px;
+  padding-left: 20px;
+}
+
+.projects .container {
+  padding-top: 00px;
+}
+
+.projects .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
+  max-width: 700px;
+  background-color: #1c2c35;
+  margin: 0 215px;
 }
 
-.App-link {
-  color: #61dafb;
+.projects .card p {
+  background-color: inherit;
+  color: #d9dcde;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.projects .card h3 {
+  background-color: inherit;
+  font-family: "Roboto", sans-serif;
+}
+
+.projects .card h4 {
+  background-color: inherit;
+  font-family: "Roboto", sans-serif;
+  color: #4287b5;
+}
+
+.projects .card:hover {
+  background: darkgray;
+}
+
+.projects .card a {
+  background-color: inherit;
+  color: #4287b5;
+}
+
+.projects .card img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 350px;
+  width: 100%;
+}
+/* contact section */
+.contact .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 700px;
+  background-color: #1c2c35;
+  margin: 0 215px;
+}
+
+.contact h2 {
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+  font-weight: normal;
+  color: #eb6bff;
+  margin: 0 var(--standard-padding);
+  padding-bottom: 30px;
+  padding-left: 20px;
+}
+
+.contact .card p {
+  background-color: inherit;
+  color: #d9dcde;
+}
+
+.contact .card a {
+  background-color: inherit;
+  color: #eb6bff;
+}
+
+/* projects collapsible settings */
+.collapsible {
+  background-color: inherit;
+
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.content {
+  display: none;
+  overflow: hidden;
+  background-color: inherit;
+}
+
+/* Tablet responsiveness */
+@media screen and (max-width: 992px) {
+  body {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar {
+    flex-direction: column;
+    padding: 0px 0px;
+    height: 115px;
+  }
+
+  .home .container h2 {
+    size: 10px;
+    width: 100%;
+  }
+
+  .about .card h2 {
+    padding: 150;
+    margin: auto;
+  }
+
+  .about .card p {
+    margin: auto;
+  }
+
+  .about .container h2 {
+    padding-top: 75px;
+  }
+
+  /* projects tablet settings */
+  .projects .container h2 {
+    padding: 150;
+    margin: auto;
+  }
+
+  .projects .container .card {
+    margin: auto;
+  }
+
+  /* contact tablet settings */
+  .contact .container h2 {
+    padding: 150;
+    margin: auto;
+  }
+
+  .contact .container .card {
+    margin: auto;
+  }
+}
+
+/* phone responsiveness */
+@media screen and (max-width: 750px) {
+  body {
+    width: 100%;
+  }
+
+  .navbar {
+    /* display: contents; */
+    padding: 0px 0px;
+    height: 200px;
+  }
+
+  .navbar ul {
+    display: grid;
+  }
+
+  .home .container h2 {
+    font-size: 18px;
+    width: 80%;
+    line-height: 1.5;
+  }
+
+  .about .card h2 {
+    padding: 150;
+    margin: auto;
+  }
+
+  .about .card p {
+    margin: auto;
+  }
+
+  .about .container h2 {
+    padding-top: 75px;
   }
 }
