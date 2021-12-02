@@ -6,7 +6,7 @@
 * {
   margin: 4px;
   padding: 4px;
-  background-color: #111a20;
+  background-color: #3d474e;
 }
 
 body {
@@ -188,7 +188,7 @@ h3 {
 }
 
 .projects .card:hover {
-  background: darkgray;
+  background: white;
 }
 
 .projects .card a {
