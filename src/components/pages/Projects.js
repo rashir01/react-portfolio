@@ -1,9 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 
-// This List component accepts props from App.js
-// We pluck off the "users" property of the props object using destructuring assignment
-// This prevents us from having to type `props.users` each time we want to refer to the users object
 export default function Intro() {
   return (
     <section>
